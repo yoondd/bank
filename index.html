@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/20230717.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="./javascript/jquery.js"></script>
+
+    <header>
+      <div class="innerbox">
+        <h1>AB Bank</h1>
+        <div class="header-right">
+          <div>09:00AM — 05:00PM</div>
+          <div>+1 323-913-4688</div>
+          <a href="#service" class="btn2">Service</a>
+        </div>
+        <i class="fa-solid fa-bars menubtn"></i>
+      </div>
+    </header>
+
+    <nav>
+      <div class="innerbox">
+        <ul class="gnb">
+          <li class="active">
+            <a href="#">HOME</a>
+          </li>
+          <li>
+            <a href="#">About Us</a>
+            <ul class="submenu">
+              <li>about1</li>
+              <li>about2</li>
+              <li>about3</li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Gallery</a>
+            <ul class="submenu">
+              <li>Gallery1</li>
+              <li>Gallery2</li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">News</a>
+            <ul class="submenu">
+              <li>News1</li>
+              <li>News2</li>
+              <li>News3</li>
+              <li>News4</li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+            <ul class="submenu">
+              <li>Contact</li>
+              <li>Contact</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <i class="fa-solid fa-xmark"></i>
+    </nav>
+
+    <script>
+      $(".menubtn").click(function () {
+        $("nav").css("left", "0px");
+      });
+      $(".fa-xmark").click(function () {
+        $("nav").css("left", "100%");
+      });
+    </script>
+
+    <section class="slidesection">
+      <div class="swiper bankslide">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide s1">
+            <div class="innerbox">
+              <h3>AAAAAAAAA</h3>
+              <h2>MMMMMM</h2>
+              <a href="#" class="btn3">Read more</a>
+            </div>
+          </div>
+          <div class="swiper-slide s2">
+            <div class="innerbox">
+              <h3>Our vision</h3>
+              <h2>Happy Bank</h2>
+              <a href="#" class="btn3">Read more</a>
+            </div>
+          </div>
+          <div class="swiper-slide s3">
+            <div class="innerbox">
+              <h3>Our vision</h3>
+              <h2>Good Partner</h2>
+              <a href="#" class="btn3">Read more</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script>
+      var happy = new Swiper(".bankslide", {
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        loop: true,
+      });
+    </script>
+
+    <section class="bigimg">
+      <div class="innerbox">
+        <div class="imgbox">
+          <img src="./img/bank.jpg" alt="돈" />
+        </div>
+        <div class="txtbox">
+          <h2>For our children!</h2>
+          <ul class="tabmenu">
+            <li class="on" data-nice=".tab1">About Us</li>
+            <li data-nice=".tab2">Why Choose Us</li>
+            <li data-nice=".tab3">Our Mission</li>
+          </ul>
+          <p class="tab1">
+            about us.....lorem Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Nobis repellendus c consectetur adipisicing elit.
+            Nobis repellendus consectetur adipisicing elit. Nobis repellendus
+            onsectetur adipisicing elit. Nobis repellendus
+          </p>
+          <p class="tab2">
+            Why Choose UsWhy Choose UsWhy Choose UsWhy Choose UsWhy Choose
+            Usorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
+            repellendus c consectetur adipisicing elit. Nobis repellendus
+            consectetur adipisicing elit. Nobis repellendus onsectetur
+            adipisicing elit. Nobis repellendus
+          </p>
+          <p class="tab3">
+            Our MissionOur MissionOur MissionOur MissionOur MissionOur
+            MissionOur MissionOur MissionOur MissionOur MissionOur MissionOur
+            MissionOur MissionOur MissionOur MissionOur MissionOur MissionOur
+            MissionOur MissionOur MissionOur MissionOur MissionOur Mission
+          </p>
+          <div class="btnwrap">
+            <a href="#" class="btn">Get In Touch</a>
+            <a href="#" class="btn2">Read more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      $(".tab2,.tab3").hide();
+      $(".tabmenu li").click(function () {
+        $(".tabmenu li").removeClass("on");
+        $(this).addClass("on");
+
+        console.log(this.dataset.nice);
+
+        $(".tab1,.tab2,.tab3").hide();
+        $(this.dataset.nice).show();
+      });
+    </script>
+
+    <section class="fullbg">
+      <div>
+        <h2>HAPPY<br />Your valuable Partner</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />
+          Voluptatibus, voluptatum, necessitatibus reprehenderit aspernatur<br />
+          provident iure quos facilis consectetur placeat exercitationem,<br />
+          perspiciatis eos aperiam nulla itaque repellendus eius! Repellendus,
+          illo quisquam!
+        </p>
+        <a href="#" class="btn">Read more</a>
+      </div>
+    </section>
+
+    <section class="ourservice" id="service">
+      <div class="innerbox">
+        <h2>Our Service</h2>
+        <ul>
+          <li>
+            <i class="fa-solid fa-piggy-bank"></i>
+            <div>
+              <h3>Piggy</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto,
+                eos! Nostrum neque adipisc
+              </p>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-building-columns"></i>
+            <div>
+              <h3>Bank</h3>
+              <p>
+                s! Nostrum neque adipisci corrupti repudiandae, voluptatem eos
+                dolores
+              </p>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-money-bill-transfer"></i>
+            <div>
+              <h3>Bill Transfer</h3>
+              <p>
+                ipsum dolor sit amet, consectetur adrupti repudiandae,
+                voluptatem eos dolores
+              </p>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-coins"></i>
+            <div>
+              <h3>Coins</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Iustatem eos dolores
+              </p>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-comments-dollar"></i>
+            <div>
+              <h3>Comments</h3>
+              <p>
+                Lur adipisicing elit. Iusto, eos! Nostrum neque adipisci
+                corrupti repudiandae, voluptatem eos dolores
+              </p>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+            <div>
+              <h3>Dollar</h3>
+              <p>
+                etur adipisicing elit. Iusto, eos! Nostrum neque adipisc,
+                voluptatem eos dolores
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <div class="innerbox">
+        <div class="contact">
+          <h3>CONTACT US</h3>
+          <ul>
+            <li><i class="fa-solid fa-phone"></i>123-123-4874</li>
+            <li><i class="fa-solid fa-envelope"></i>test@test.com</li>
+            <li><i class="fa-solid fa-fax"></i>070-1347-7755</li>
+            <li>
+              <i class="fa-solid fa-location-dot"></i>Gyeonggi-do, Republic of
+              Korea
+            </li>
+          </ul>
+        </div>
+        <div class="news">
+          <h3>POPULAR NEWS</h3>
+
+          <dl>
+            <dt>
+              Your Personal Guide to<br />
+              5 Best Places to Visit on Earth
+            </dt>
+            <dd>May 04, 2023</dd>
+          </dl>
+
+          <dl>
+            <dt>
+              Lorem ipsum dolor sit,<br />
+              amet consectetur adipisicing elit.
+            </dt>
+            <dd>May 04, 2023</dd>
+          </dl>
+        </div>
+        <div class="links">
+          <h3>QUICK LINKS</h3>
+          <ul class="quicklist">
+            <li>
+              <a href="#">About us</a>
+            </li>
+            <li>
+              <a href="#">Gallery</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+            <li>
+              <a href="#">Menu1</a>
+            </li>
+            <li>
+              <a href="#">Menu2</a>
+            </li>
+            <li>
+              <a href="#">Menu3</a>
+            </li>
+            <li>
+              <a href="#">Location</a>
+            </li>
+            <li>
+              <a href="#">Admin</a>
+            </li>
+            <li>
+              <a href="#">Link</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="innerbox">
+          <div>© 2023 AB Bank.</div>
+          <div class="mobile-none">SNS buttons</div>
+          <div>Privacy Policy</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
